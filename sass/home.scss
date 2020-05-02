@@ -5,4 +5,60 @@
     background: $midnight-green;
     width: 100vw;
     padding: $padding-stack;
+
+    hr {
+        height: 1px;
+        border: 0;
+        border-top: 4px solid $rapture-blue;
+        width: 50px;
+        position: absolute;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .d-lg-none {
+        text-align: center;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.desktop-intro-p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+}
+
+.bg-pattern-home-1 {
+    position: absolute;
+    left: -28vh;
+    top: 50%;
+    height: 200px;
+    margin-top: -100px;
+}
+
+.action-phrase {
+    padding: 75px 20px;
+}
+.bg-pattern-home-2 {     
+        background-image: url(../images/bg-pattern-home-2.svg);
+        height: 100px;
+        width: 358px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        bottom: 0;
+        margin: 0 auto;
+    &.bg-responsive {
+        margin-top: 50px
+    }
+}
+@media screen and (max-width: 576px) {
+    .bg-pattern-home-2 {
+        width: 100vw;
+        height: calc(100vw * 0.279);
+        left: -15.4vw;
+    }
 }

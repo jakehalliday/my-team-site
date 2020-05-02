@@ -10,6 +10,20 @@ html {
   color: #fff;
 }
 
+:active {
+  -webkit-appearance: none;
+  -moz-outline-style: none;
+  outline-style: none;
+  outline: none;
+}
+
+:focus {
+  -webkit-appearance: none;
+  -moz-outline-style: none;
+  outline-style: none;
+  outline: none;
+}
+
 .body1 {
   font-size: 18px;
   line-height: 28px;
@@ -42,6 +56,13 @@ h1 span {
   }
 }
 
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
 h2 {
   font-size: 48px;
   line-height: 48px;
@@ -62,20 +83,6 @@ button {
   color: #fff;
   border-style: solid;
   border-width: 2px;
-}
-
-button:active {
-  -webkit-appearance: none;
-  -moz-outline-style: none;
-  outline-style: none;
-  outline: none;
-}
-
-button:focus {
-  -webkit-appearance: none;
-  -moz-outline-style: none;
-  outline-style: none;
-  outline: none;
 }
 
 button[data-disabled=true] {
@@ -129,11 +136,16 @@ img {
 
 .navbar {
   background: #014d56;
-  padding-left: 8vw;
+  padding: 5vw 11.5vw 0 11.5vw;
+  border: none;
 }
 
 .navbar-collapse {
-  padding-left: 2rem;
+  margin-left: 1.8rem;
+}
+
+.nav-item {
+  margin-left: 1.2rem;
 }
 
 @media screen and (max-width: 576px) {
@@ -144,6 +156,7 @@ img {
     margin-top: 15vh;
   }
   .navbar-collapse {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 100%;
@@ -180,7 +193,7 @@ img {
   }
   .close-navbar {
     position: absolute;
-    right: 6vw;
+    right: 8vw;
     top: 7vh;
   }
 }
@@ -188,6 +201,66 @@ img {
 .intro {
   background: #014d56;
   width: 100vw;
-  padding: 3vw 10vw 3vw 10vw;
+  padding: 5vw 11.5vw 0 11.5vw;
+}
+
+.intro hr {
+  height: 1px;
+  border: 0;
+  border-top: 4px solid #79c8c7;
+  width: 50px;
+  position: absolute;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.intro .d-lg-none {
+  text-align: center;
+}
+
+.intro p {
+  margin: 0;
+}
+
+.desktop-intro-p {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+}
+
+.bg-pattern-home-1 {
+  position: absolute;
+  left: -28vh;
+  top: 50%;
+  height: 200px;
+  margin-top: -100px;
+}
+
+.action-phrase {
+  padding: 75px 20px;
+}
+
+.bg-pattern-home-2 {
+  background-image: url(../images/bg-pattern-home-2.svg);
+  height: 100px;
+  width: 358px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.bg-pattern-home-2.bg-responsive {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-pattern-home-2 {
+    width: 100vw;
+    height: calc(100vw * 0.279);
+    left: -15.4vw;
+  }
 }
 /*# sourceMappingURL=home.css.map */

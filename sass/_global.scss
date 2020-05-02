@@ -5,7 +5,7 @@ $police-blue: hsl(187, 41, 29);
 $deep-green: hsl(186, 100, 14);
 $state-green: hsl(186, 96, 10);
 $dark-green: hsl(186, 100, 8);
-$padding-stack: 3vw 10vw 3vw 10vw;
+$padding-stack: 5vw 11.5vw 0 11.5vw;
 
 @import url(https://fonts.googleapis.com/css?family=Livvic:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,900,900italic);
 
@@ -19,10 +19,23 @@ html {
   line-height: 28px;
   color: #fff;
 }
+  :active {
+    -webkit-appearance: none;
+    -moz-outline-style: none;
+    outline-style: none;
+    outline: none;
+  }
+  :focus {
+    -webkit-appearance: none;
+    -moz-outline-style: none;
+    outline-style: none;
+    outline: none;
+  }
 .body1 {
   font-size: 18px;
   line-height: 28px;
 }
+
 
 .body2 {
   font-size: 15px;
@@ -47,6 +60,12 @@ h1 {
     line-height: 56px;
   }
 }
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
 h2 {
   font-size: 48px;
   line-height: 48px;
@@ -67,18 +86,7 @@ button {
   color: #fff;
   border-style: solid;
   border-width: 2px;
-  &:active {
-    -webkit-appearance: none;
-    -moz-outline-style: none;
-    outline-style: none;
-    outline: none;
-  }
-  &:focus {
-    -webkit-appearance: none;
-    -moz-outline-style: none;
-    outline-style: none;
-    outline: none;
-  }
+
 
   &[data-disabled=true] {
     opacity: 0.25;
@@ -125,10 +133,14 @@ img {
 }
 .navbar {
   background: $midnight-green;
-  padding-left: 8vw;
+  padding: $padding-stack;
+  border: none;
 }
 .navbar-collapse {
-  padding-left: 2rem;
+  margin-left: 1.8rem;
+}
+.nav-item {
+  margin-left: 1.2rem;
 }
 @media screen and (max-width: 576px) {
   .nav-item {
@@ -138,6 +150,7 @@ img {
     margin-top: 15vh;
   }
   .navbar-collapse {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 100%;
@@ -176,7 +189,7 @@ img {
   }
   .close-navbar {
     position: absolute;
-    right: 6vw;
+    right: 8vw;
     top: 7vh;
   }
 }
